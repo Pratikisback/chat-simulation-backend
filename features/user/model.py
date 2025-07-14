@@ -13,3 +13,5 @@ class User(Base):
     # assigned_shift_type = Column(Integer, ForeignKey("shift_types.id"), nullable=True)
     on_break = Column(Boolean, default=False)
     on_shift = Column(Boolean, default=False)
+
+

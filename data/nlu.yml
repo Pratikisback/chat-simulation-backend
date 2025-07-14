@@ -1,0 +1,33 @@
+version: "3.1"
+nlu:
+- intent: get_project_price
+  examples: |
+    - What is the price of [Purva Clermont](project_name) in [Chembur, Mumbai](location)?
+    - Can you tell me how much [Purva Silversands](project_name) costs in [Pune](location)?
+    - How much does a [2 BHK](bhk) at [Purva Aspire](project_name) in [Bavdhan](location) cost?
+    - Tell me the price for [Purva Zenium](project_name) at [International Airport Road](location)
+    - What's the cost of [3 BHK](bhk) in [Purva Blubelle](project_name), [Rajajinagar](location)?
+    - Is [Purva Emerald Bay](project_name) affordable in [Mundhwa, Pune](location)?
+
+- intent: get_project_overview
+  examples: |
+    - Give me an overview of [Purva Clermont](project_name)
+    - What can you tell me about [Purva Aspire](project_name)?
+    - I want to know more about [Purva Blubelle](project_name)
+    - Can I get a summary of [Purva Emerald Bay](project_name)?
+    - Tell me about the features of [Purva Zenium](project_name)
+
+- intent: available_projects_by_location
+  examples: |
+    - Show me projects in [South](location)
+    - Are there any ongoing projects in [South](location)?
+    - What projects are available in [East](location)?
+    - How many ongoing projects in [North](location)?
+    - Projects in [West](location)?
+
+- intent: ask_bot_identity
+  examples: |
+    - Who are you?
+    - What can you do?
+    - Tell me about yourself
+    - Are you a bot?

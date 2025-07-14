@@ -11,3 +11,11 @@ class UserCreate(BaseModel):
     on_break: bool = False
     on_shift: bool = False  
     is_deleted: bool = False
+
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str

@@ -1,0 +1,27 @@
+version: "3.1"
+rules:
+- rule: Get project price
+  steps:
+    - intent: get_project_price
+    - action: action_get_project_price
+
+- rule: Get project overview
+  steps:
+    - intent: get_project_overview
+    - action: action_get_project_overview
+
+- rule: Show projects by location
+  steps:
+    - intent: available_projects_by_location
+    - action: action_list_projects_by_location
+
+- rule: Respond to identity question
+  steps:
+    - intent: ask_identity
+    - action: utter_ask_identity
+
+
+- rule: Tell about bot identity
+  steps:
+    - intent: ask_bot_identity
+    - action: utter_bot_identity

@@ -1,0 +1,32 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_project_price\"}}]": "action_get_project_price",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_project_price\"}}, {\"prev_action\": {\"action_name\": \"action_get_project_price\"}, \"user\": {\"intent\": \"get_project_price\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"available_projects_by_location\"}}]": "action_list_projects_by_location",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"available_projects_by_location\"}}, {\"prev_action\": {\"action_name\": \"action_list_projects_by_location\"}, \"user\": {\"intent\": \"available_projects_by_location\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_project_overview\"}}]": "action_get_project_overview",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_project_overview\"}}, {\"prev_action\": {\"action_name\": \"action_get_project_overview\"}, \"user\": {\"intent\": \"get_project_overview\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_bot_identity\"}}]": "utter_bot_identity",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_bot_identity\"}}, {\"prev_action\": {\"action_name\": \"utter_bot_identity\"}, \"user\": {\"intent\": \"ask_bot_identity\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_identity\"}}]": "utter_ask_identity",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_identity\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_identity\"}, \"user\": {\"intent\": \"ask_identity\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"available_projects_by_location\"}}]",
+      "predicting default action with intent session_start",
+      "predicting default action with intent back",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_bot_identity\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_bot_identity\"}}, {\"prev_action\": {\"action_name\": \"utter_bot_identity\"}, \"user\": {\"intent\": \"ask_bot_identity\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"available_projects_by_location\"}}, {\"prev_action\": {\"action_name\": \"action_list_projects_by_location\"}, \"user\": {\"intent\": \"available_projects_by_location\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_project_price\"}}, {\"prev_action\": {\"action_name\": \"action_get_project_price\"}, \"user\": {\"intent\": \"get_project_price\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_project_overview\"}}, {\"prev_action\": {\"action_name\": \"action_get_project_overview\"}, \"user\": {\"intent\": \"get_project_overview\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_project_price\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_project_overview\"}}]"
+    ]
+  }
+}

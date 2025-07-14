@@ -1,0 +1,55 @@
+version: "3.1"
+
+intents:
+  - get_project_price
+  - get_project_overview
+  - available_projects_by_location
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - ask_identity
+
+entities:
+  - project_name
+  - location
+  - bhk
+
+actions:
+  - action_get_project_price
+  - action_get_project_overview
+  - action_list_projects_by_location
+
+responses:
+  utter_greet:
+    - text: "Hi! How can I assist you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Feel free to ask about any real estate project."
+
+  utter_cheer_up:
+    - text: "Here’s something to cheer you up 😊"
+
+  utter_did_that_help:
+    - text: "Did that answer your question?"
+
+  utter_happy:
+    - text: "Great to hear that!"
+
+  utter_ask_location:
+    - text: "Can you please specify the location you're interested in?"
+
+  utter_ask_project_name:
+    - text: "Which project are you asking about?"
+
+  utter_ask_identity:
+    - text: "I'm your virtual real estate assistant. I can help you explore property projects, pricing, and overviews. Ask me anything related to real estate!"
+
+  utter_bot_identity:
+    - text: "I’m a real estate assistant bot here to help you with project info, prices, and more!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
