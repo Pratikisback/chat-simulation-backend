@@ -1,13 +1,3 @@
-version: "3.1"
-nlu:
-- intent: get_project_price
-  examples: |
-    - What is the price of [Purva Clermont](project_name) in [Chembur, Mumbai](location)?
-    - Can you tell me how much [Purva Silversands](project_name) costs in [Pune](location)?
-    - How much does a [2 BHK](bhk) at [Purva Aspire](project_name) in [Bavdhan](location) cost?
-    - Tell me the price for [Purva Zenium](project_name) at [International Airport Road](location)
-    - What's the cost of [3 BHK](bhk) in [Purva Blubelle](project_name), [Rajajinagar](location)?
-    - Is [Purva Emerald Bay](project_name) affordable in [Mundhwa, Pune](location)?
 
 - intent: get_project_overview
   examples: |

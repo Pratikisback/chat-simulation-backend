@@ -7,11 +7,11 @@ class Response:
         self.status = "success"
         self.message = ""
         self.data = None
-        self.error_code = None 
+        self.status_code = None 
 
-    def set(self, status: str = "success", error_code: int = 0,message: str = "", data=None):
+    def set(self, status: str = "success", status_code: int = 0,message: str = "", data=None):
         self.status = status
-        self.error_code = error_code
+        self.status_code = status_code
         self.message = message
         self.data = data
 
@@ -21,7 +21,7 @@ class Response:
         return {
             "status": self.status,
             "message": self.message,
-            "error_code": self.error_code,
+            "status_code": self.status_code,
             "timestamp": str(datetime.now(timezone.utc)),
             "data": self.data,
         }
