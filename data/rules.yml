@@ -19,9 +19,3 @@ rules:
   steps:
     - intent: ask_identity
     - action: utter_ask_identity
-
-
-- rule: Tell about bot identity
-  steps:
-    - intent: ask_bot_identity
-    - action: utter_bot_identity

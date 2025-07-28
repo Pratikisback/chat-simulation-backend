@@ -1,3 +1,34 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - hey there
+    - hi there
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - farewell
+    - talk to you later
+    - catch you later
+
+- intent: get_project_price
+  examples: |
+    - What's the price of [Purva Clermont](project_name)?
+    - How much does [Purva Aspire](project_name) cost?
+    - Price of [Purva Blubelle](project_name)?
+    - Tell me the cost of [Purva Emerald Bay](project_name)
+    - What is the pricing for [Purva Zenium](project_name)?
+    - How much for [Purva Clermont](project_name)?
+    - Cost of [Purva Aspire](project_name)?
+    - Price range for [Purva Blubelle](project_name)
 
 - intent: get_project_overview
   examples: |
@@ -6,6 +37,9 @@
     - I want to know more about [Purva Blubelle](project_name)
     - Can I get a summary of [Purva Emerald Bay](project_name)?
     - Tell me about the features of [Purva Zenium](project_name)
+    - Describe [Purva Clermont](project_name)
+    - What are the amenities in [Purva Aspire](project_name)?
+    - Details about [Purva Blubelle](project_name)
 
 - intent: available_projects_by_location
   examples: |
@@ -14,10 +48,59 @@
     - What projects are available in [East](location)?
     - How many ongoing projects in [North](location)?
     - Projects in [West](location)?
+    - List projects in [South](location)
+    - Any developments in [East](location)?
+    - What's available in [North](location)?
 
-- intent: ask_bot_identity
+- intent: affirm
+  examples: |
+    - yes
+    - yep
+    - yeah
+    - that's right
+    - correct
+    - absolutely
+    - sure
+    - of course
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not really
+    - I don't think so
+    - never
+    - not at all
+    - definitely not
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - wonderful
+    - I am feeling very good
+    - fantastic
+    - excellent
+    - awesome
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - not so good
+    - extremely sad
+    - terrible
+    - awful
+    - not great
+
+- intent: ask_identity
   examples: |
     - Who are you?
     - What can you do?
     - Tell me about yourself
     - Are you a bot?
+    - What is your purpose?
+    - How can you help me?
+    - What do you do?

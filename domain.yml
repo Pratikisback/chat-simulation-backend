@@ -21,6 +21,7 @@ actions:
   - action_get_project_price
   - action_get_project_overview
   - action_list_projects_by_location
+  - action_get_project_amenities
 
 responses:
   utter_greet:
@@ -45,10 +46,10 @@ responses:
     - text: "Which project are you asking about?"
 
   utter_ask_identity:
-    - text: "I'm your virtual real estate assistant. I can help you explore property projects, pricing, and overviews. Ask me anything related to real estate!"
+    - text: "I’m a real estate assistant bot here to help you with project info, prices, and more!"
 
   utter_bot_identity:
-    - text: "I’m a real estate assistant bot here to help you with project info, prices, and more!"
+    - text: "I'm your virtual real estate assistant. I can help you explore property projects, pricing, and overviews. Ask me anything related to real estate!"
 
 session_config:
   session_expiration_time: 60

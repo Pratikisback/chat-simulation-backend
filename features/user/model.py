@@ -14,4 +14,3 @@ class User(Base):
     on_break = Column(Boolean, default=False)
     on_shift = Column(Boolean, default=False)
 
-

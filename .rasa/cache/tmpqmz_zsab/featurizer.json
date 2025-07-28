@@ -1,0 +1,62 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "ask_identity": 1,
+        "available_projects_by_location": 2,
+        "back": 3,
+        "deny": 4,
+        "get_project_overview": 5,
+        "get_project_price": 6,
+        "goodbye": 7,
+        "greet": 8,
+        "mood_great": 9,
+        "mood_unhappy": 10,
+        "nlu_fallback": 11,
+        "out_of_scope": 12,
+        "restart": 13,
+        "session_start": 14
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_get_project_price": 13,
+        "action_get_project_overview": 14,
+        "action_list_projects_by_location": 15,
+        "utter_ask_identity": 16,
+        "utter_ask_location": 17,
+        "utter_ask_project_name": 18,
+        "utter_bot_identity": 19,
+        "utter_cheer_up": 20,
+        "utter_did_that_help": 21,
+        "utter_goodbye": 22,
+        "utter_greet": 23,
+        "utter_happy": 24
+      },
+      "entities": {
+        "bhk": 0,
+        "location": 1,
+        "project_name": 2
+      },
+      "slots": {},
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}
