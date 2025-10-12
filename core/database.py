@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
-print
 engine = create_engine(DATABASE_URL)
 
 # Session factory

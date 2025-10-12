@@ -26,21 +26,24 @@ def login_user(user_data: schema.UserLogin, db: Session = Depends(get_db)):
     access_token = result["data"]["access_token"]
     refresh_token = result["data"]["refresh_token"]
 
-    response = JSONResponse(status_code=200, content=result)
+    response = JSONResponse(status_code=201, content=result)
     response.set_cookie(
         key="access_token",
         value=access_token,
         httponly=True,
-        samesite="strict",
+        samesite="none",
         secure=False  # Use False if testing on localhost with HTTP and True if in production with HTTPS
     )
     response.set_cookie(
         key="refresh_token",
         value=refresh_token,
         httponly=True,
-        samesite="strict",
+        samesite="none",
         secure=False  # Use False if testing on localhost with HTTP and True if in production with HTTPS
     )
+
+    print(response.headers, "response headers")
+
 
     return response 
 

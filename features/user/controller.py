@@ -1,5 +1,6 @@
 
 from sqlalchemy.orm import Session
+from sqlalchemy import select
 from features.user.schema import UserCreate, UserLogin
 from features.user.model import User
 from core.security import hash_password, create_access_token
@@ -47,7 +48,10 @@ def register_user(user: UserCreate, db: Session):
 
 def login(user: UserLogin, db: Session):
     response = Response()
-    user_details = db.query(User).filter(User.email == user.email).first()
+    pipeline_statement = select(User).where(User.email == user.email).limit(1)
+    user_details = db.execute(pipeline_statement).scalars().first()
+    print(user_details.email)
+    # user_details = db.query(User).filter(User.email == user.email).first()
     if not user_details:
         return response.set(status="user not found", status_code=404, message="User not found")
     is_valid = bcrypt.checkpw(user.password.encode('utf-8'), user_details.password.encode('utf-8'))
@@ -55,7 +59,7 @@ def login(user: UserLogin, db: Session):
 
 
     if not is_valid:
-        return response.set(status="credentials mismatch", status_code=404, message="password is incorrect")
+        return response.set(status="credentials mismatch", status_code=403, message="password is incorrect")
 
     db.query(User).filter(User.email == user.email).update({User.on_shift: True}, synchronize_session="fetch")
     db.commit()
